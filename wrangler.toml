@@ -6,4 +6,5 @@ type = "javascript"
 crons = ["* * * * *"]
 
 # uncomment if you are deploying manually
-# kv_namespaces = [{binding="KV_AUDIT_LOGS", id="your_kv_namespace_id"}]
+kv_namespaces = [{binding="KV_AUDIT_LOGS", id="your_kv_namespace_id"}]
+compatibility_date = "2022-11-30"
