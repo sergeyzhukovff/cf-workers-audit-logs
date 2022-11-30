@@ -22,6 +22,7 @@ jobs:
           export KV_NAMESPACE_ID=$(wrangler kv:namespace list | jq -c 'map(select(.title | contains("KV_AUDIT_LOGS")))' | jq -r ".[0].id")
           echo "[env.prod]" >> wrangler.toml
           echo "kv_namespaces = [{binding=\"KV_AUDIT_LOGS\", id=\"${KV_NAMESPACE_ID}\"}]" >> wrangler.toml
+          echo "compatibility_date = \"2022-11-30\"" >> wrangler.toml
         secrets: |
           SECRET_CLOUDFLARE_API_TOKEN
           SECRET_SLACK_WEBHOOK_URL
